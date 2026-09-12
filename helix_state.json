@@ -1,0 +1,29 @@
+{
+  "identity": "HelixMind v1.0 — Apex",
+  "evolution": 1,
+  "history": [
+    {
+      "cpu": 3.5,
+      "memory": 8.7,
+      "disk": 40.3,
+      "load_1": 1.25,
+      "load_5": 0.3,
+      "load_15": 0.1,
+      "net_sent_mb": 0.75,
+      "net_recv_mb": 3.95,
+      "process_count": 162,
+      "boot_time": "2026-09-12T11:51:57+00:00",
+      "uptime_hours": 0.0,
+      "timestamp": "2026-09-12T11:52:26.113202+00:00",
+      "signature": "fd7c7ba84c40576bf9d8e1d0",
+      "health_score": 100
+    }
+  ],
+  "alerts": [],
+  "status": "active",
+  "last_run": "2026-09-12T11:52:26.113298+00:00",
+  "hostname": "runnervmlun5p",
+  "os": "Linux",
+  "last_health_score": 100,
+  "last_health_label": "Excellent"
+}
