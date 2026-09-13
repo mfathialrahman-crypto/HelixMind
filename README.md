@@ -1,33 +1,52 @@
-# HelixMind — Apex Cognitive System
+# HelixMind v1.1 — Anomaly Intelligence Layer
 
-**The strongest self-evolving intelligence core in the series.**
+**Role in the ecosystem:** Telemetry / Monitoring / Anomaly Intelligence
 
-HelixMind goes beyond basic monitoring. It implements multi-layer detection, predictive signals, a quantitative Health Score, and automated insight generation.
+HelixMind is the observation and anomaly detection layer of the larger system.
 
-## Key Capabilities
+## What it does
 
-- **Multi-Layer Anomaly Detection**
-  - Layer 1: Absolute thresholds
-  - Layer 2: Statistical deviation (mean + std)
-  - Layer 3: Short-term predictive trend signals
+- Collects system telemetry (CPU, Memory, Disk, Load, Processes, Network, Uptime)
+- Runs multi-layer anomaly detection
+- Detects **correlated multi-signal events** (not just isolated thresholds)
+- Produces an **explainable Health Score** with component breakdown
+- Emits structured machine-readable insights and events
 
-- **Health Score (0–100)** with clear status labels
-- **Rich Metrics**: CPU, Memory, Disk, Load averages (1/5/15), Processes, Uptime, Network
-- **Automated Insights** saved to `helix_insights.json`
-- **Deep History** (up to 300 snapshots)
-- **Full Operational Logging**
+## Architecture (current)
+
+```
+collect_metrics()
+      ↓
+multi_layer_detection()  +  detect_correlated_events()
+      ↓
+calculate_health_score()   (explainable components)
+      ↓
+structured outputs:
+  - helix_state.json
+  - helix_insights.json
+  - helix_events.json
+  - helix_report.txt
+```
+
+## Key improvements in v1.1
+
+- Multi-signal correlation (resource pressure detection)
+- Health Score with explicit component weights
+- Structured events with confidence scores
+- Cleaner separation of concerns
 
 ## Files
 
-| File                 | Purpose                              |
-|----------------------|--------------------------------------|
-| `helix_core.py`      | Main Apex engine                     |
-| `helix_state.json`   | Persistent state & full history      |
-| `helix_report.txt`   | Human-readable report                |
-| `helix_insights.json`| Structured insights & anomalies      |
-| `helix.log`          | Operational log                      |
+| File                  | Purpose                                      |
+|-----------------------|----------------------------------------------|
+| `helix_core.py`       | Main engine                                  |
+| `helix_state.json`    | Full persistent state + history              |
+| `helix_insights.json` | Latest machine-readable analysis             |
+| `helix_events.json`   | Recent correlated events                     |
+| `helix_report.txt`    | Human-readable report                        |
+| `helix.log`           | Operational log                              |
 
-## Run Locally
+## Run
 
 ```bash
 pip install -r requirements.txt
@@ -36,9 +55,9 @@ python helix_core.py
 
 ## Automation
 
-GitHub Actions runs the full cycle every 2 hours and commits results automatically.
+GitHub Actions runs every 2 hours and commits all outputs.
 
 ---
 
-**Author**: mfathialrahman-crypto  
-**Position in family**: The Apex / Peak power version
+**Ecosystem position:**  
+HelixMind → (Telemetry + Anomalies) → consumed later by Cognitive / Reasoning layers
