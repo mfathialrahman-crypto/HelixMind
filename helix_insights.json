@@ -1,9 +1,24 @@
 {
-  "generated_at": "2026-09-13T08:41:06.902942+00:00",
-  "generation": 7,
+  "generated_at": "2026-09-13T14:00:19.371332+00:00",
+  "generation": 8,
   "health_score": 100,
-  "insights": [],
+  "health_label": "Excellent",
+  "health_components": {
+    "cpu": 25,
+    "memory": 25,
+    "disk": 20,
+    "load": 15,
+    "stability": 15
+  },
   "anomalies": [
-    "✅ All layers clear — system stable"
-  ]
+    "All layers clear — system stable"
+  ],
+  "insights": [],
+  "correlated_events": [],
+  "metrics_snapshot": {
+    "cpu": 5.5,
+    "memory": 8.4,
+    "disk": 40.3,
+    "load_1": 0.98
+  }
 }
