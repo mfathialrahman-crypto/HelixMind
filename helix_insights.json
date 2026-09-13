@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-13T21:59:29.663349+00:00",
-  "generation": 10,
-  "health_score": 96,
+  "generated_at": "2026-09-13T23:59:34.646009+00:00",
+  "generation": 11,
+  "health_score": 100,
   "health_label": "Excellent",
   "health_components": {
     "cpu": 25,
     "memory": 25,
     "disk": 20,
-    "load": 11,
+    "load": 15,
     "stability": 15
   },
   "anomalies": [
@@ -16,9 +16,9 @@
   "insights": [],
   "correlated_events": [],
   "metrics_snapshot": {
-    "cpu": 5.5,
-    "memory": 8.9,
+    "cpu": 4.3,
+    "memory": 6.6,
     "disk": 40.3,
-    "load_1": 2.14
+    "load_1": 0.11
   }
 }
