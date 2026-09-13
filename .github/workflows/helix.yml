@@ -1,4 +1,4 @@
-name: HelixMind Apex Cycle
+name: HelixMind Anomaly Intelligence Cycle
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  apex-cycle:
+  cycle:
     runs-on: ubuntu-latest
     timeout-minutes: 12
 
@@ -29,14 +29,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Execute HelixMind Apex Core
+      - name: Execute HelixMind
         run: python3 helix_core.py
 
       - name: Commit results
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add helix_state.json helix_report.txt helix_insights.json helix.log || true
+          git add helix_state.json helix_report.txt helix_insights.json helix_events.json helix.log || true
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "🧬 HelixMind Apex cycle — auto update"
+          git commit -m "HelixMind v1.1 cycle — auto update"
           git push
