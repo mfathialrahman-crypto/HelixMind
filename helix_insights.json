@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-15T07:02:29.135381+00:00",
-  "generation": 17,
+  "generated_at": "2026-09-15T13:02:24.728633+00:00",
+  "generation": 18,
   "health_score": 100,
   "health_label": "Excellent",
   "health_components": {
@@ -16,9 +16,9 @@
   "insights": [],
   "correlated_events": [],
   "metrics_snapshot": {
-    "cpu": 5.8,
-    "memory": 9.9,
+    "cpu": 6.0,
+    "memory": 7.1,
     "disk": 40.3,
-    "load_1": 0.65
+    "load_1": 1.41
   }
 }
